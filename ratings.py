@@ -22,6 +22,14 @@ def get_restaurant_ratings(file):
         restaurant_rating = restaurant[1]
         restaurants[restaurant_name] = restaurant_rating
 
+    while True:
+        new_restaurant = input("What is the name of the restaurant you're rating? Or enter 'q' to quit. ") 
+        new_rating= input("Rate the restaurant from 1 to 5. ")  
+        
+        if new_restaurant == 'q':
+            break
+        restaurants[new_restaurant] = new_rating
+
     for restaurant in sorted(restaurants):
         print("{} is rated at {}".format(restaurant, restaurants[restaurant]))
 
