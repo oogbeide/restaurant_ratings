@@ -22,5 +22,9 @@ def get_restaurant_ratings(file):
         restaurant_rating = restaurant[1]
         restaurants[restaurant_name] = restaurant_rating
 
+    for restaurant in sorted(restaurants):
+        print("{} is rated at {}".format(restaurant, restaurants[restaurant]))
 
-        
+    return restaurants
+
+get_restaurant_ratings(restaurant_file)
